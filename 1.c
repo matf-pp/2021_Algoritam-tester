@@ -20,10 +20,9 @@ int main(int argc, char** argv){
     int n, m;
     printf("Unesite 2 broja\n");
 
+    scanf("%d%d", &n, &m);
 
-    
-
-
+    resi(n,m);
 
     return 0;
 }

@@ -5,7 +5,6 @@ import System.Process
 import System.Directory
 
 
-
 data TipFajla =  CFile
                | PythonFile
                | CppFile
@@ -40,23 +39,20 @@ ourCompile code args = case (findExtension code) of
                         "py" -> kompajlirajServerskiPython code args
                         "hs" -> kompajlirajServerskiHs code args
                         
+napraviDir = createDirectory "resenja"
 
 izvrsi n = izvrsavaj n 1
         where 
             izvrsavaj n k
-                    | n == k = callCommand $ "./a.out < test1/" ++ rdbr ++  "_in.txt > " ++ rdbr ++ "_out.txt"
+                    | n == k = callCommand $ "./a.out < test1/" ++ rdbr ++  "_in.txt > resenja/" ++ rdbr ++ "_out.txt"
                     | n > k = do
-                            callCommand $ "./a.out < test1/" ++ rdbr ++  "_in.txt > " ++ rdbr ++ "_out.txt"
+                            callCommand $ "./a.out < test1/" ++ rdbr ++  "_in.txt > resenja/" ++ rdbr ++ "_out.txt"
                             izvrsavaj n (k+1)
                     where rdbr = show k
 
-filesInDir = getDirectoryContents
 
 
-
-
-
-
+filesInDir code = getDirectoryContents code
 
 
 someFunc = putStrLn "someFunc"

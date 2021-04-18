@@ -2,15 +2,8 @@ module Main where
 
 import Lib
 
+
 main :: IO ()
--- main = do
---     pocetnoObavestenje
---     x <- getLine
---     kompiliraj x
---     izvrsi 10
---     someFunc
-
-
 main = do
 --   sta zelis da kompiliras
 --   ucitaj to sto zelis
@@ -22,11 +15,13 @@ main = do
 --     KOMPILIRAJ
     ourCompile kod args
 
-    -- putStrLn "Unesite folder gde su testovi (podrazumevano u folderu test)"
-    -- testFolder <- getLine    
+    -- putStrLn "Testovi su u folderu test1"
+    napraviDir
     
     putStrLn $ "pokrecem program " ++ kod
+
     folderFiles <- filesInDir "test1"
+    -- izvrsava nas kod onoliko puta koliko ima fajlova u folderu i upisuje izlaze u folder
     izvrsi ((length $ folderFiles) - 2)
  
 
