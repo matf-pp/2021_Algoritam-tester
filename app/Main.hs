@@ -8,23 +8,30 @@ main = do
 --   sta zelis da kompiliras
 --   ucitaj to sto zelis
     takeCodeName
-    kod <- getLine
+    code <- getLine
 --   argumenti komandne linije za kompilaciju
     takeArgs
     args <- getLine
 --     KOMPILIRAJ
-    ourCompile kod args
+    ourCompile code args
 
-    -- putStrLn "Testovi su u folderu test1"
-    napraviDir
-    
-    putStrLn $ "pokrecem program " ++ kod
+-- pravi direktorijum "resenja"
+    napraviDir "resenja"
+
+    putStrLn $ "kompiliran je program" ++ code
 
     folderFiles <- filesInDir "test1"
+
+
     -- izvrsava nas kod onoliko puta koliko ima fajlova u folderu i upisuje izlaze u folder
-    izvrsi ((length $ folderFiles) - 2)
+    obavest ((length $ folderFiles) - 2)
+
+    putStrLn "kraj"
+    -- izvrsi komanda_poziva ((length $ folderFiles) - 2)
  
 
+-- pozovi ovo primer: ./a.out 1.dat
+-- ulaz: u 1_in.txt
 
 
 -- main = do

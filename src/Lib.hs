@@ -17,7 +17,6 @@ data Ekstenzija = Ekst TipFajla
 instance Show Ekstenzija where
     show (Ekst CFile)       = "c"
     show (Ekst HaskellFile) = "hs"
-    show (Ekst PythonFile)  = "py"
     show (Ekst CppFile)     = "cpp"
 
 
@@ -26,7 +25,6 @@ takeArgs = putStrLn "Write arguments you want to compile with (if you dont want 
 
 
 kompajlirajServerskiC code args = callCommand $ "gcc " ++ code ++ args
-kompajlirajServerskiPython code args = callCommand $ "python3 " ++ code ++ args
 kompajlirajServerskiCpp code args = callCommand $ "g++ " ++ code ++ args
 kompajlirajServerskiHs code args = callCommand $ "ghc " ++ code ++ args
 
@@ -36,24 +34,41 @@ findExtension code = reverse $ takeWhile (/= '.') (reverse code)
 ourCompile code args = case (findExtension code) of
                         "c" -> kompajlirajServerskiC code args
                         "cpp" -> kompajlirajServerskiCpp code args
-                        "py" -> kompajlirajServerskiPython code args
                         "hs" -> kompajlirajServerskiHs code args
                         
-napraviDir = createDirectory "resenja"
+napraviDir name = createDirectoryIfMissing False name
+
+obavest n = obavesti n 1
+             where obavesti n k
+                        | n == k = do
+                                funkcija                                 
+                        | otherwise = do
+                                funkcija
+                                obavesti n (k+1)
+                        where
+                                funkcija = do
+                                        putStrLn $ "navedite komandu poziva za " ++ (show k) ++ "_in.txt"
+                                        x <- getLine
+                                        callCommand $ x ++ "< test1/" ++ (show k) ++  "_in.txt > resenja/" ++ (show k) ++ "_out.txt"    
+
+
 
 izvrsi n = izvrsavaj n 1
         where 
             izvrsavaj n k
-                    | n == k = callCommand $ "./a.out < test1/" ++ rdbr ++  "_in.txt > resenja/" ++ rdbr ++ "_out.txt"
+                    | n == k = callCommand $ "./a.out  < test1/" ++ rdbr ++  "_in.txt > resenja/" ++ rdbr ++ "_out.txt"
                     | n > k = do
                             callCommand $ "./a.out < test1/" ++ rdbr ++  "_in.txt > resenja/" ++ rdbr ++ "_out.txt"
                             izvrsavaj n (k+1)
-                    where rdbr = show k
+                    where 
+                        rdbr = show k
+                --         argumenti_poziva =  do
+                --                                 content <- readFile ("1_in.txt")
+                --                                 linesOfFiles <- lines content
 
 
 
-filesInDir code = getDirectoryContents code
-
+filesInDir dir = getDirectoryContents dir
 
 someFunc = putStrLn "someFunc"
 
