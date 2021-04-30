@@ -5,6 +5,7 @@ import Data.List
 import System.IO
 import Lib
 import System.Process
+import System.Directory
 
 main :: IO ()
 main = do
@@ -19,9 +20,8 @@ main = do
 
 -- fajlovi iz foldera 
     filesToExecuteWith <- filesInDir folderName
-    let duzinaNiza = length filesToExecuteWith
 
-    print $ [0..duzinaNiza-1]
+    createDirectoryIfMissing False "resenja" 
 
 -- mapiranje funkcije 
     mapM (obradi1 folderName) filesToExecuteWith
