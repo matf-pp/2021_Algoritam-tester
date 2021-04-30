@@ -4,14 +4,14 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9bddb7d9e944c225b09a48f495a790b000add6dc79847083b08d069446122de7
+-- hash: b65a9caebd12bce6e3f651851b442ad473499fd7b96923f377774bd4f5f8ba05
 
 name:           projekat
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/projekat#readme>
 homepage:       https://github.com/githubuser/projekat#readme
 bug-reports:    https://github.com/githubuser/projekat/issues
-author:         Author name here
+author:         Nikola Borjan
 maintainer:     example@example.com
 copyright:      2021 Author name here
 license:        BSD3
@@ -34,8 +34,8 @@ library
       src
   build-depends:
       base >=4.7 && <5
-    , process
     , directory
+    , process
   default-language: Haskell2010
 
 executable projekat-exe
@@ -47,6 +47,7 @@ executable projekat-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , directory
     , process
     , projekat
   default-language: Haskell2010
@@ -61,6 +62,7 @@ test-suite projekat-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , directory
     , process
     , projekat
   default-language: Haskell2010
