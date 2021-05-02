@@ -9,6 +9,7 @@ import System.Process
 main :: IO ()
 main = do
 
+-- server kompilira 
     takeCompilingCommand
     compilingCommand <- getLine
 --  KOMPILIRAJ
@@ -26,21 +27,10 @@ main = do
 -- mapiranje funkcije 
     mapM (obradi1 folderName) filesToExecuteWith
 
-
-
-      
-
-
-
-
-    -- (_, Just so, _, ph1)  <- createProcess (proc "ls" []) { std_out = CreatePipe } 
-    -- (_, _, _, ph2) <- createProcess (proc "sort" []) { std_in = UseHandle so }
-    -- waitForProcess ph1
-    -- waitForProcess ph2
-
-
-
     putStrLn "kraj"
- 
+
+
+--TODO:
+-- dati vecu slobodu serverskoj strani da moze da zadaje koji fajlovi se izvrsavaju itd
 
 
