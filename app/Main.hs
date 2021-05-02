@@ -1,9 +1,9 @@
 module Main where
 
 
+import Lib
 import Data.List
 import System.IO
-import Lib
 import System.Process
 import System.Directory
 
@@ -13,24 +13,27 @@ main = do
 -- server kompilira 
     takeCompilingCommand
     compilingCommand <- getLine
+    
+
+    createDirectoryIfMissing False "out" 
+
 --  KOMPILIRAJ
-    exeCommand compilingCommand
+    exeCommand (compilingCommand ++ " -o out/izvrsni")
 
     takeFolderName
     folderName <- getLine
 
--- fajlovi iz foldera 
     filesToExecuteWith <- filesInDir folderName
 
-    createDirectoryIfMissing False "resenja" 
-
--- mapiranje funkcije 
+-- izvrsi program za svaki fajl iz foldera sa test primerima 
     mapM (obradi1 folderName) filesToExecuteWith
+
+    clearFilesWithPattern "izvrsni"
 
     putStrLn "kraj"
 
 
---TODO:
--- dati vecu slobodu serverskoj strani da moze da zadaje koji fajlovi se izvrsavaju itd
 
+-- TODO napraviti fajl config.txt koji ce da cuva nacin kompiliranja i izvrsavanja,
+-- imena foldera sa testovima, imena izlaznih itd..
 

@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b65a9caebd12bce6e3f651851b442ad473499fd7b96923f377774bd4f5f8ba05
+-- hash: f00878743659da6c2bc42403b0241b5b4933feedf977270c9a029daedf592b6c
 
 name:           projekat
 version:        0.1.0.0
@@ -41,6 +41,7 @@ library
 executable projekat-exe
   main-is: Main.hs
   other-modules:
+      MainClient
       Paths_projekat
   hs-source-dirs:
       app

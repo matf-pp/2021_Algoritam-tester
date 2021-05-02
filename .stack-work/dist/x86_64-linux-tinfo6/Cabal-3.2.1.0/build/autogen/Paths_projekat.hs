@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/home/marko/Desktop/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/88228731d5097facbe4b69d73ee0bc18d6659ca7d92b0c1cd49121989d2f911c/8.10.4/bin"
-libdir     = "/home/marko/Desktop/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/88228731d5097facbe4b69d73ee0bc18d6659ca7d92b0c1cd49121989d2f911c/8.10.4/lib/x86_64-linux-ghc-8.10.4/projekat-0.1.0.0-Jad4BAvdnwXLItIdK3dpmp"
-dynlibdir  = "/home/marko/Desktop/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/88228731d5097facbe4b69d73ee0bc18d6659ca7d92b0c1cd49121989d2f911c/8.10.4/lib/x86_64-linux-ghc-8.10.4"
-datadir    = "/home/marko/Desktop/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/88228731d5097facbe4b69d73ee0bc18d6659ca7d92b0c1cd49121989d2f911c/8.10.4/share/x86_64-linux-ghc-8.10.4/projekat-0.1.0.0"
-libexecdir = "/home/marko/Desktop/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/88228731d5097facbe4b69d73ee0bc18d6659ca7d92b0c1cd49121989d2f911c/8.10.4/libexec/x86_64-linux-ghc-8.10.4/projekat-0.1.0.0"
-sysconfdir = "/home/marko/Desktop/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/88228731d5097facbe4b69d73ee0bc18d6659ca7d92b0c1cd49121989d2f911c/8.10.4/etc"
+bindir     = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/bin"
+libdir     = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/lib/x86_64-linux-ghc-8.10.4/projekat-0.1.0.0-Jad4BAvdnwXLItIdK3dpmp"
+dynlibdir  = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/lib/x86_64-linux-ghc-8.10.4"
+datadir    = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/share/x86_64-linux-ghc-8.10.4/projekat-0.1.0.0"
+libexecdir = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/libexec/x86_64-linux-ghc-8.10.4/projekat-0.1.0.0"
+sysconfdir = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "projekat_bindir") (\_ -> return bindir)
