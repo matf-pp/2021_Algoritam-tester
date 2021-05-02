@@ -9,7 +9,7 @@ takeCompilingCommand = putStrLn "Write a command you want to compile and execute
 takeFolderName = putStrLn "Where are test examples for your code"                        
 
 exeCommand command = callCommand $ command
-isRegularFile f = f /= "." && f /= ".." && 
+isRegularFile f = f /= "." && f /= ".." 
 
 filesInDir dirName = do
                         files <- getDirectoryContents dirName
@@ -17,7 +17,7 @@ filesInDir dirName = do
 
 obradi1 folderName file1 = do
         let pathIn = folderName ++ "/" ++ file1
-        let pathOut = folderName ++ "/out_" ++ file1
+        let pathOut = "resenja/out_" ++ file1
         finHandle <- openFile pathIn ReadMode 
         foutHandle <- openFile pathOut WriteMode
         (_, _, _, ph1) <- createProcess (proc "./a.out" []) { std_in = UseHandle finHandle,
