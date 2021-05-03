@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f00878743659da6c2bc42403b0241b5b4933feedf977270c9a029daedf592b6c
+-- hash: ee55dbf307b398a8e1983dfb734ad6ce5e27e7a1949a90a2e19b660082b91472
 
 name:           projekat
 version:        0.1.0.0
@@ -35,7 +35,10 @@ library
   build-depends:
       base >=4.7 && <5
     , directory
+    , hashable
     , process
+    , split
+    , text
   default-language: Haskell2010
 
 executable projekat-exe
@@ -49,8 +52,11 @@ executable projekat-exe
   build-depends:
       base >=4.7 && <5
     , directory
+    , hashable
     , process
     , projekat
+    , split
+    , text
   default-language: Haskell2010
 
 test-suite projekat-test
@@ -64,6 +70,9 @@ test-suite projekat-test
   build-depends:
       base >=4.7 && <5
     , directory
+    , hashable
     , process
     , projekat
+    , split
+    , text
   default-language: Haskell2010

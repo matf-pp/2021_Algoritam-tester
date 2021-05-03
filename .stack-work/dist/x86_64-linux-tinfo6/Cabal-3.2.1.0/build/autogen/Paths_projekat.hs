@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/bin"
-libdir     = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/lib/x86_64-linux-ghc-8.10.4/projekat-0.1.0.0-Jad4BAvdnwXLItIdK3dpmp"
+libdir     = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/lib/x86_64-linux-ghc-8.10.4/projekat-0.1.0.0-D5gdG8ITs519j52VmI4Dau"
 dynlibdir  = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/lib/x86_64-linux-ghc-8.10.4"
 datadir    = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/share/x86_64-linux-ghc-8.10.4/projekat-0.1.0.0"
 libexecdir = "/home/user/Desktop/projekat/2021_Algoritam-tester/.stack-work/install/x86_64-linux-tinfo6/9e194b85368e95e3c7c002900f7322f5b31143796a8cf4fd63078fc058a82c87/8.10.4/libexec/x86_64-linux-ghc-8.10.4/projekat-0.1.0.0"

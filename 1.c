@@ -19,6 +19,7 @@ void resi(int n, int m){
 int main(int argc, char** argv){
     int n, m;
 
+    printf("/t/t/n/n/t");
     scanf("%d%d", &n, &m);
 
     resi(n,m);

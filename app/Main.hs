@@ -6,27 +6,33 @@ import Data.List
 import System.IO
 import System.Process
 import System.Directory
+import Data.Hashable
 
 main :: IO ()
 main = do
 
 -- server kompilira 
-    takeCompilingCommand
+    putStrLn "Napisite komandu kojom kompilirate npr: 'gcc -Wall'"
     compilingCommand <- getLine
-    
+
+    putStrLn "Unesite ime programa koji zelite da kompilirate npr: '1.c '"
+    fileName <- getLine 
+
+-- upisati u fajl config.txt komandu za kompiliranje i folder gde su testovi
+    putStrLn "Unesite ime foldera u kome su test primeri npr: 'test1' "
+    testExamplesFolder <- getLine
 
     createDirectoryIfMissing False "out" 
-
 --  KOMPILIRAJ
-    exeCommand (compilingCommand ++ " -o out/izvrsni")
+    exeCommand (compilingCommand ++" "++ fileName ++ " -o out/izvrsni")
 
-    takeFolderName
-    folderName <- getLine
 
-    filesToExecuteWith <- filesInDir folderName
+    filesToExecuteWith <- filesInDir testExamplesFolder
+
+    writeFile "config.txt" (compilingCommand ++ ":" ++ testExamplesFolder)
 
 -- izvrsi program za svaki fajl iz foldera sa test primerima 
-    mapM (obradi1 folderName) filesToExecuteWith
+    mapM (obradiServer testExamplesFolder) filesToExecuteWith
 
     clearFilesWithPattern "izvrsni"
 
