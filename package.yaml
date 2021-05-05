@@ -3,8 +3,8 @@ version:             0.1.0.0
 github:              "githubuser/projekat"
 license:             BSD3
 author:              "Nikola Borjan"
-maintainer:          "example@example.com"
-copyright:           "2021 Author name here"
+maintainer:          "nikola.borjan@yahoo.com"
+copyright:           "2021 Nikola Borjan, Marko Bura"
 
 extra-source-files:
 - README.md

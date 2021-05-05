@@ -19,7 +19,7 @@ main = do
     fileName <- getLine 
 
 -- upisati u fajl config.txt komandu za kompiliranje i folder gde su testovi
-    putStrLn "Unesite ime foldera u kome su test primeri npr: 'test1' "
+    putStrLn "Unesite ime relativnu putanju foldera u kome su test primeri npr: 'test1' "
     testExamplesFolder <- getLine
 
     createDirectoryIfMissing False "out" 
@@ -28,11 +28,14 @@ main = do
 
 
     filesToExecuteWith <- filesInDir testExamplesFolder
+    print (length filesToExecuteWith)
+
 
     writeFile "config.txt" (compilingCommand ++ ":" ++ testExamplesFolder)
 
 -- izvrsi program za svaki fajl iz foldera sa test primerima 
     mapM (obradiServer testExamplesFolder) filesToExecuteWith
+
 
     clearFilesWithPattern "izvrsni"
 

@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ee55dbf307b398a8e1983dfb734ad6ce5e27e7a1949a90a2e19b660082b91472
+-- hash: 55dec380c43857f17c0d4d73ba91ff1190a7a4ae6a3001299b0a54afde766cc7
 
 name:           projekat
 version:        0.1.0.0
@@ -12,8 +12,8 @@ description:    Please see the README on GitHub at <https://github.com/githubuse
 homepage:       https://github.com/githubuser/projekat#readme
 bug-reports:    https://github.com/githubuser/projekat/issues
 author:         Nikola Borjan
-maintainer:     example@example.com
-copyright:      2021 Author name here
+maintainer:     nikola.borjan@yahoo.com
+copyright:      2021 Nikola Borjan, Marko Bura
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -28,6 +28,7 @@ source-repository head
 library
   exposed-modules:
       Lib
+      LibClient
   other-modules:
       Paths_projekat
   hs-source-dirs:
