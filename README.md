@@ -5,3 +5,11 @@
 Opis
 
 Tester za ispite i kolokvijume. Pomoću programa moguće je uporediti i proveriti rešenja zadataka i na osnovu različitih test primera videti koliko bodova je student osvojio na ispitu(kolokvijumu). Ceo program pisan je u jeziku Haskell i namenjen je za bilo koji operativni sistem pod uslovom da su instalirani svi paketi potrebni za Haskell.
+
+
+
+
+Podaci o autorima
+
+Nikola Borjan, 
+Marko Bura, 
