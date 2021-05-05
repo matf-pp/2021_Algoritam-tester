@@ -55,17 +55,6 @@
   (major1) == 1 && (major2) == 6 && (minor) <= 9)
 #endif /* MIN_VERSION_process */
 
-/* package projekat-0.1.0.0 */
-#ifndef VERSION_projekat
-#define VERSION_projekat "0.1.0.0"
-#endif /* VERSION_projekat */
-#ifndef MIN_VERSION_projekat
-#define MIN_VERSION_projekat(major1,major2,minor) (\
-  (major1) <  0 || \
-  (major1) == 0 && (major2) <  1 || \
-  (major1) == 0 && (major2) == 1 && (minor) <= 0)
-#endif /* MIN_VERSION_projekat */
-
 /* package split-0.2.3.4 */
 #ifndef VERSION_split
 #define VERSION_split "0.2.3.4"
@@ -187,9 +176,15 @@
   (major1) == 2 && (major2) == 34 && (minor) <= 0)
 #endif /* MIN_TOOL_VERSION_strip */
 
+#ifndef CURRENT_PACKAGE_KEY
+#define CURRENT_PACKAGE_KEY "projekat-0.1.0.0-D5gdG8ITs519j52VmI4Dau"
+#endif /* CURRENT_PACKAGE_KEY */
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "projekat-0.1.0.0-4Y8fLXjGDQ85utVaRE3LMh-projekat-exe"
+#define CURRENT_COMPONENT_ID "projekat-0.1.0.0-D5gdG8ITs519j52VmI4Dau"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"
 #endif /* CURRENT_PACKAGE_VERSION */
+
+#undef CURRENT_PACKAGE_KEY
+#undef CURRENT_COMPONENT_ID

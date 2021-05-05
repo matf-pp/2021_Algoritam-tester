@@ -33,7 +33,7 @@ obradiClient testFilesFolder file1 = do
                                                                 std_out = UseHandle  foutHandle  }
         waitForProcess ph1
 
-uporediFajlove niz fajl = do
+uporediFajlove fajl = do
     let pathIn = "out/out_" ++ fajl
     let pathOut = "outClient/out_" ++ fajl
     handleOut <- openFile pathOut ReadMode

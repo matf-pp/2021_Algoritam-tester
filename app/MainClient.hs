@@ -30,7 +30,7 @@ mainClient = do
 
     mapM_ (obradiClient testExamplesFolder) filesToExecuteWith
 
-    mapM_ (uporediFajlove niz1) filesToExecuteWith
+    mapM_ uporediFajlove filesToExecuteWith
     
 
     clearFilesWithPattern "izvrsni"

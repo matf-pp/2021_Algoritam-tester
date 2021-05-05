@@ -1,12 +1,14 @@
-/home/marko/Desktop/2021_Algoritam-tester/app/Main.hs:
-  hash: 8fbe929ef9b773c3f3457d795e6f64185436270fec1137879b7152d659955aca
-/home/marko/Desktop/2021_Algoritam-tester/projekat.cabal:
-  hash: 054fedeb49164d42ca67fc0f41f11c1218099166960fb8ffe519d3136b063fad
-/home/marko/Desktop/2021_Algoritam-tester/ChangeLog.md:
+/home/marko/Desktop/kola/2021_Algoritam-tester/package.yaml:
+  hash: 6d6a00eb26473e053e5af7c5cebe4252eaa819a8ea55bb2ca4c5c090089d2e0e
+/home/marko/Desktop/kola/2021_Algoritam-tester/README.md:
+  hash: 0388edca5c0d685b82d36cf10f2f60253b343134f7c0db6297013f0759e78622
+/home/marko/Desktop/kola/2021_Algoritam-tester/ChangeLog.md:
   hash: 44df4db03ee8548cdc367bb7eeede5362c6ddb89bb2517f5a0487f3a4021c071
-? /home/marko/Desktop/2021_Algoritam-tester/.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.2.1.0/build/projekat-exe/autogen/Paths_projekat.hs
-: hash: ba9843bded30f16b60430c33eb2bf6609a96ecf336f33771ff33174ea21c0c8c
-/home/marko/Desktop/2021_Algoritam-tester/README.md:
-  hash: 5d72d9ca3baf061b0b64c4ca3098fa66ac36507137b94b8397c4102a85517117
-/home/marko/Desktop/2021_Algoritam-tester/package.yaml:
-  hash: a78bfe33f244d6cae1e9cc7dcca023aa595264a4d31d61a43107ed5ffc22db2b
+/home/marko/Desktop/kola/2021_Algoritam-tester/app/Main.hs:
+  hash: 354a3d529492057c5a0ef723726968ce779933a01ae00977b29961281dd2376e
+/home/marko/Desktop/kola/2021_Algoritam-tester/projekat.cabal:
+  hash: 7ed7b242938accc5fffca59ee117189d6b8a5165288b189dcc4b2bfc70659b72
+? /home/marko/Desktop/kola/2021_Algoritam-tester/.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.2.1.0/build/projekat-exe/autogen/Paths_projekat.hs
+: hash: 227dc88ff9dc8e692eedc2737fc71fc2fb375ec6df4917e096e1ddd37ea9f621
+/home/marko/Desktop/kola/2021_Algoritam-tester/app/MainClient.hs:
+  hash: 493241f59213c4617833a56cf0ee626e6633ea22dd6c9f3976c7746b20eab604
