@@ -23,7 +23,7 @@ Tester za ispite i kolokvijume. Pomoću programa moguće je uporediti i proverit
             b) Pokrenuti program komandom: stack ghci
             c) Otvara se haskell interpreter u kom pokrecete komandu: main
             d) Pratite uputstva
-        Kao klijentska strana nastavlja komandom:
+        Kao klijentska strana:
             a) U trenutni direktorijum premestiti zeljeni fajl koji zelite da testirate
             b) Pokrenuti program komandom: stack ghci
             c) Otvara se haskell interpreter u kom pokrecete komandu: mainClient
