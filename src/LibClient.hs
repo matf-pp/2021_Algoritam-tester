@@ -9,12 +9,7 @@ import Data.Hashable
 import Data.Char
 import Data.List.Split
                      
-trim xs = dropSpaceTail "" $ dropWhile isSpace xs
-dropSpaceTail maybeStuff "" = ""
-dropSpaceTail maybeStuff (x:xs)
-        | isSpace x = dropSpaceTail (x:maybeStuff) xs
-        | null maybeStuff = x : dropSpaceTail "" xs
-        | otherwise       = reverse maybeStuff ++ x : dropSpaceTail "" xs
+
 
 exeCommand command = callCommand $ command
 isRegularFile f = f /= "." && f /= ".." 
@@ -41,21 +36,17 @@ uporediFajlove fajl = do
     sadrzajIn <- hGetContents handleIn
     sadrzajOut <- hGetContents handleOut
 
-    let x = hashNiz $ (words . trim) sadrzajIn
-    let y = hashNiz $ (words . trim) sadrzajOut
+    let x = hashNiz $ (words) sadrzajIn
+    let y = hashNiz $ (words) sadrzajOut
 
     if (x == y)
-        then print $ "test primer je tacan za fajl " ++ fajl
+        then print $ "test primer JESTE tacan za fajl " ++ fajl
         else print $ "test primer NIJE tacan za fajl " ++ fajl
-
-
     
 
 hashNiz a = sum
     $ zipWith (*) [1..(length a)]
     $ map hash a
-
-
 
 
 clearFilesWithPattern pattern = callCommand $ "find . -name '" ++ pattern ++ "' -delete"
