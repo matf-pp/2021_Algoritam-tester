@@ -1,6 +1,6 @@
 name:                projekat
 version:             0.1.0.0
-github:              "githubuser/projekat"
+github:              "github.com/matf-pp/2021_Algoritam-tester"
 license:             BSD3
 author:              "Nikola Borjan"
 maintainer:          "nikola.borjan@yahoo.com"
@@ -31,8 +31,19 @@ library:
   source-dirs: src
 
 executables:
-  projekat-exe:
+  server:
     main:                Main.hs
+    other-modules:       []
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - projekat
+  client:
+    main:                Client.hs
+    other-modules:       []
     source-dirs:         app
     ghc-options:
     - -threaded
@@ -41,13 +52,3 @@ executables:
     dependencies:
     - projekat
 
-tests:
-  projekat-test:
-    main:                Spec.hs
-    source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - projekat
