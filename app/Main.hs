@@ -18,7 +18,7 @@ main = do
     fileName <- getLine 
 
 -- upisivanje u fajl config.txt komandu za kompiliranje i folder gde su testovi
-    putStrLn "Unesite ime relativnu putanju foldera u kome su test primeri npr: 'test1' "
+    putStrLn "Unesite relativnu putanju foldera u kome su test primeri npr: 'test1' "
     testExamplesFolder <- getLine
 
     createDirectoryIfMissing False "out" 
