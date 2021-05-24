@@ -8,26 +8,21 @@ Tester za ispite i kolokvijume. Pomoću programa moguće je uporediti i proverit
 
 
 ## Način pokretanja
-    1. Skinuti repozitorijum komandom:
-            git clone https://github.com/matf-pp/2021_Algoritam-tester.git
-            promenite trenutni direktorijum
-            cd 2021_Algoritam-tester
+    1. Na githubu otvoriti releases i skinuti zipovane fajlove client.zip i server.zip
 
-    2. Instalacija:
-        U terminalu pokrenuti komandu:
-            curl -sSL https://get.haskellstack.org/ | sh
+    2. Kada uspešno skinete prethodno navedene fajlove njih treba otpakovati komandom unzip
 
-    3. Pokretanja programa:
-        Kao serverska strana:
-            a) U trenutni direktorijum iskopirati folder sa test primerima i zeljeni C Fajl koji zelite da kompilirate
-            b) Pokrenuti program komandom: stack ghci
-            c) Otvara se haskell interpreter u kom pokrecete komandu: main
-            d) Pratite uputstva
-        Kao klijentska strana:
-            a) U trenutni direktorijum premestiti zeljeni fajl koji zelite da testirate
-            b) Pokrenuti program komandom: stack ghci
-            c) Otvara se haskell interpreter u kom pokrecete komandu: mainClient
-            d) Pratite uputstva
+    3. Pozicionirati se u terminalu u folder gde su otpakovani fajlovi i pratiti sledece komande:
+        Asistent(server):
+            - pokreće aplikaciju komandom ./server
+            - prati upustva tako što prvo unosi komandu kojom će kompajlirati fajl,
+                zatim ime fajla, pa nakon toga folder u kome se nalaze ulazi za zadati program ako postoje
+            - program će napraviti izlaze koji će se dalje uporedjivati sa izlazima studentskih programa
+            
+        Student(client):
+            - pokreće aplikaciju komandom ./client
+            - zadaje ime fajla koji želi da proveri
+            - program izbacuje za koje test primere se izlaz poklapa sa zadatim a za koje ne
 
 
 ## Podaci o autorima
