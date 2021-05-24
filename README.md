@@ -10,7 +10,7 @@ Tester za ispite i kolokvijume. Pomoću programa moguće je uporediti i proverit
 ## Način pokretanja
     1. Na githubu otvoriti releases i skinuti zipovane fajlove client.zip i server.zip
 
-    2. Kada uspešno skinete prethodno navedene fajlove njih treba otpakovati komandom unzip
+    2. Kada uspešno skinete prethodno navedene fajlove njih treba otpakovati da bi bili spremni za koriscenje
 
     3. Pozicionirati se u terminalu u folder gde su otpakovani fajlovi i pratiti sledece komande:
         Asistent(server):
